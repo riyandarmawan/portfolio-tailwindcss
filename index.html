@@ -17,12 +17,86 @@
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
+    <!-- Header Start -->
+    <header class="absolute left-0 right-0 top-0 z-[9999]">
+      <div class="container">
+        <div class="relative flex w-full items-center justify-between py-4">
+          <a
+            href="#home"
+            class="px-4 text-base font-bold text-primary md:text-lg lg:text-2xl"
+            >riyandarmawan</a
+          >
+          <div class="flex items-center">
+            <button
+              type="button"
+              name="hamburger"
+              id="hamburger"
+              class="absolute right-0 cursor-pointer lg:hidden"
+            >
+              <span
+                class="hamburger-line origin-top-left transition duration-500 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-500 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line origin-bottom-left transition duration-500 ease-in-out"
+              ></span>
+            </button>
+            <nav
+              id="nav-menu"
+              class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-4 shadow-xl lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="mx-8 flex py-2 text-base font-medium group-hover:text-primary lg:text-lg"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="mx-8 flex py-2 text-base font-medium group-hover:text-primary lg:text-lg"
+                    >About</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#projects"
+                    class="mx-8 flex py-2 text-base font-medium group-hover:text-primary lg:text-lg"
+                    >Projects</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#blogs"
+                    class="mx-8 flex py-2 text-base font-medium group-hover:text-primary lg:text-lg"
+                    >Blogs</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#contact"
+                    class="mx-8 flex py-2 text-base font-medium group-hover:text-primary lg:text-lg"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
     <!-- Home Section Start -->
     <section id="home" class="pb-32 pt-28 lg:pt-20">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
-            <h2 class="text-dark mb-3 text-xl font-semibold lg:text-2xl">
+            <h2 class="mb-3 text-xl font-semibold text-dark lg:text-2xl">
               Hello, Welcome to
               <span
                 class="mt-2 block text-3xl font-bold text-primary lg:text-5xl"
@@ -30,7 +104,8 @@
               >
             </h2>
             <p class="mb-5 block max-w-96 text-base text-secondary lg:text-lg">
-              My name is Riyan Darmawan, I'm a web developer. nice to meet you👋
+              My name is Riyan Darmawan, and I'm from Indonesia. nice to meet
+              you👋
             </p>
             <a
               href="#about"
@@ -38,7 +113,7 @@
               >About me</a
             >
           </div>
-          <div class="mt-10 w-full self-end px-4 lg:-mt-10 lg:w-1/2">
+          <div class="mt-10 w-full self-end px-4 lg:w-1/2">
             <div class="relative lg:right-0">
               <img
                 src="./src/img/riyan.png"
@@ -68,34 +143,36 @@
     <!-- Home Section End -->
 
     <!-- About Section Start -->
-    <div id="about" class="pb-32 pt-32">
+    <div id="about" class="pb-32 pt-24">
       <div class="container">
         <div class="mt-5 flex flex-wrap">
-          <h3 class="mb-2 w-full px-4 text-lg font-bold text-primary lg:text-xl">
+          <h3
+            class="mb-2 w-full px-4 text-lg font-bold text-primary lg:text-xl"
+          >
             About me
           </h3>
           <div class="mb-5 w-full px-4 lg:w-1/2">
-            <h2 class="text-dark mb-4 text-2xl font-semibold lg:text-4xl">
+            <h2 class="mb-4 text-2xl font-semibold text-dark lg:text-4xl">
               Let's get to know me
             </h2>
             <p class="text-base text-secondary lg:text-lg">
-              Currently, I'm a software engineering student. I'm interested to
-              learning new languages.
+              I'm a web devlevoper and currently a software engineering student.
+              I'm interested to learning new languages.
             </p>
           </div>
           <div class="w-full px-4 lg:w-1/2">
-            <h2 class="text-dark mb-4 text-2xl font-semibold lg:text-4xl">
+            <h2 class="mb-4 text-2xl font-semibold text-dark lg:text-4xl">
               Let's be friends
             </h2>
             <p class="mb-5 text-base text-secondary lg:text-lg">
               Here are my social media that you can follow.
             </p>
-            <div class="mx-auto flex max-w-96 justify-evenly">
+            <div class="flex justify-start gap-4">
               <!-- Youtube -->
               <a
                 href="https://www.youtube.com/@riyandarmawan/"
                 target="_blank"
-                class="border-dark text-dark rounded-full border-2 p-2 hover:border-[#FF0000] hover:bg-[#FF0000] hover:text-white"
+                class="rounded-full border-2 border-dark p-2 text-dark hover:border-[#FF0000] hover:bg-[#FF0000] hover:text-white"
               >
                 <svg
                   width="20"
@@ -115,7 +192,7 @@
               <a
                 href="https://www.instagram.com/riyandarmawan25/"
                 target="_blank"
-                class="border-dark text-dark rounded-full border-2 p-2 hover:border-[#E1306C] hover:bg-[#E1306C] hover:text-white"
+                class="rounded-full border-2 border-dark p-2 text-dark hover:border-[#E1306C] hover:bg-[#E1306C] hover:text-white"
               >
                 <svg
                   width="20"
@@ -135,7 +212,7 @@
               <a
                 href="https://www.github.com/riyandarmawan/"
                 target="_blank"
-                class="border-dark text-dark rounded-full border-2 p-2 hover:border-dark hover:bg-dark hover:text-white"
+                class="rounded-full border-2 border-dark p-2 text-dark hover:border-dark hover:bg-dark hover:text-white"
               >
                 <svg
                   width="20"
@@ -156,5 +233,20 @@
       </div>
     </div>
     <!-- About Section End -->
+
+    <!-- Back to top start -->
+    <a
+      href="#home"
+      class="fixed bottom-4 right-4 z-[9999] hidden h-14 w-14 items-center justify-center rounded-full bg-primary hover:animate-pulse"
+      id="to-top"
+    >
+      <span
+        class="mt-2 block h-4 w-4 rotate-45 border-l-2 border-t-2 border-white"
+      ></span>
+    </a>
+    <!-- Back to top end -->
+
+    <!-- my js -->
+    <script src="./src/js/script.js"></script>
   </body>
 </html>
