@@ -6,10 +6,10 @@ window.onscroll = () => {
 
   if (window.scrollY > fixedNav) {
     header.classList.add("navbar-fixed");
-    toTop.classList.replace('hidden', 'flex')
+    toTop.classList.replace("hidden", "flex");
   } else {
-      header.classList.remove("navbar-fixed");
-    toTop.classList.replace('flex', 'hidden')
+    header.classList.remove("navbar-fixed");
+    toTop.classList.replace("flex", "hidden");
   }
 };
 
@@ -28,3 +28,29 @@ window.addEventListener("click", (e) => {
     navMenu.classList.add("hidden");
   }
 });
+
+// toggle dark
+const toggleDark = document.querySelector("#toggle-dark");
+const innerToggleDark = document.querySelector("#inner-toggle-dark");
+const html = document.querySelector("html");
+
+toggleDark.addEventListener("click", () => {
+  if (toggleDark.checked) {
+    html.classList.add("dark");
+    localStorage.theme = "dark";
+  } else {
+    html.classList.remove("dark");
+    localStorage.theme = "light";
+  }
+});
+
+// toggle position
+if (
+  localStorage.theme === "dark" ||
+  (!("theme" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+  toggleDark.checked = true;
+} else {
+  toggleDark.checked = false;
+}
